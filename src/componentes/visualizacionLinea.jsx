@@ -14,7 +14,6 @@ export default class VisualizacionLinea extends Component {
                 "mark": {
                     "type": "line",
                     "point": true,
-                    "interpolate": "monotone",
                     "tooltip": true
                 },
 
