@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
-import Visualizacion from './visualizacion'
+import VisualizacionLinea from './visualizacionLinea'
 
 export default class SalaTuring extends Component {
 
 
     render() {
         return (
-            <div className="container-fluid col-1 my-0 mx-0">
-                <Visualizacion configuraciones={{
-            // width: 200,
-            // height: 200,
-            "data": {
-                "values" : [{"price":3772,"date":"10/27/2019"},
+            <div className="container-fluid col-4 my-0 mx-0">
+                <VisualizacionLinea values={ [{"price":3772,"date":"10/27/2019"},
                 {"price":3483,"date":"5/31/2019"},
                 {"price":1814,"date":"2/6/2019"},
                 {"price":4732,"date":"2/21/2019"},
@@ -111,15 +107,7 @@ export default class SalaTuring extends Component {
                 {"price":1444,"date":"9/20/2019"},
                 {"price":2938,"date":"6/22/2019"},
                 {"price":2825,"date":"9/28/2019"}]
-            },
-            "mark": "line",
-            "encoding": {
-                "x": { 
-                    "field": "date", 
-                    "type": "temporal" },
-                "y": { "field": "price", "type": "quantitative" }
-            }
-        }}/>
+            }/>
             </div>
 
         )

@@ -21,7 +21,6 @@ function App() {
             <span className="navbar-brand mb-0 h1">Navbar</span>
           </nav>
           <div className="container-fluid">
-            <Route exact path={"/informacionGeneral"} component={() => <InformacionGeneral/>}></Route>
             <Switch>
               <Route exact path={"/informacionGeneral"} component={() => <InformacionGeneral/>}></Route>
               <Route exact path={"/sala/turing"} component={() => <SalaTuring/>}></Route>

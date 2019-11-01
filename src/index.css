@@ -3,5 +3,8 @@
     min-height: 100vh;
 }
 .contenido{
-    background-color: #E7EFC5;
+    /* background-color: #E7EFC5; */
+}
+.tituloCard{
+    color: #242939 ;
 }
