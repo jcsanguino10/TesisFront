@@ -38,7 +38,7 @@ export default class informacionGeneral extends Component {
           <h3 className="p-3 tituloCard">Consumo de energia </h3>
           <div className="card-body">
             <div className="col-12">
-              <VisualizacionLinea values={[{ "price": 3772, "date": "10/27/2019" },
+              <VisualizacionLinea xAxis="date" yAxis="price" alto={window.innerHeight/3} values={[{ "price": 3772, "date": "10/27/2019" },
               { "price": 3483, "date": "5/31/2019" },
               { "price": 1814, "date": "2/6/2019" },
               { "price": 4732, "date": "2/21/2019" },

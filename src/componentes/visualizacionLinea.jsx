@@ -4,10 +4,11 @@ import VegaEmbed from 'vega-embed'
 export default class VisualizacionLinea extends Component {
     constructor(props) {
         super(props);
+        this.objetivo = React.createRef()
         this.state = {
             configuraciones: {
                 "width": "container",
-                "height": window.innerHeight / 3,
+                "height": this.props.alto,
                 "data": {
                     "values": this.props.values
                 },
@@ -19,12 +20,12 @@ export default class VisualizacionLinea extends Component {
 
                 "encoding": {
                     "x": {
-                        "field": "date",
+                        "field": this.props.xAxis,
                         "type": "temporal",
                         "title": null
                     },
                     "y": {
-                        "field": "price",
+                        "field": this.props.yAxis,
                         "type": "quantitative",
                         "title": null
                     }
@@ -34,11 +35,11 @@ export default class VisualizacionLinea extends Component {
     }
     componentDidMount() {
         var conf = this.state.configuraciones;
-        VegaEmbed('#visuLin', conf, { actions: false, theme: "fivethirtyeight", padding: { left: 20, top: 20, right: 20, bottom: 20 } })
+        VegaEmbed(this.objetivo.current , conf, { actions: false, theme: "fivethirtyeight", padding: { left: 20, top: 20, right: 20, bottom: 20 } })
     }
     render() {
         return (
-            <div className="container-fluid col-12 px-0" id="visuLin">
+            <div className="container-fluid col-12 px-0" ref = {this.objetivo}>
             </div>
         )
     }
