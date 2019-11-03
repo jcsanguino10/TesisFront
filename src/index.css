@@ -2,7 +2,9 @@
     background-color: #242939;
     min-height: 100vh;
 }
-
+.infoEquipo{
+    font-size: 20px;
+}
 .ip{
     font-size: 12px;
 }

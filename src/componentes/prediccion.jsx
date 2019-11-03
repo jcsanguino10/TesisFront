@@ -8,7 +8,7 @@ export default class Prediccion extends Component {
             numeroMaquinas: 1,
             cantidadRAM: 1,
             velocidadProcesador: 1,
-            resultado: []
+            resultado: null
         }
         this.ponerOpciones = this.ponerOpciones.bind(this);
         this.realizarPrediccion = this.realizarPrediccion.bind(this);
@@ -17,13 +17,43 @@ export default class Prediccion extends Component {
     }
 
     realizarPrediccion() {
-
+        if(this.state.resultado === null)
+        {
+            this.setState({
+                resultado : []
+            })
+        }
     }
     resultadoPrediccion() {
-        // let res = [];
-        // for (let index = 0; index < this.state.resultado; index++) {
-
-        // }
+        let res = [];
+        console.log(this.state.resultado);
+        if (this.state.resultado === null) {
+            res.push(
+                <div className="alert alert-secondary my-4" role="alert">
+                    Introduce los recursos para tu maquina virtual y calcula el costo de su despliegue
+                </div>
+            )
+        }
+        else {
+            res.push(
+                <div className="container my-4 pl-0">
+                    <div className="card shadow">
+                        <div className="card-body my-2">
+                            <div className="row">
+                                <h3 className="card-title col-11">Turing</h3>
+                                <div className="col-1 row justify-content-end">
+                                    <button className="btn btn-light btn-sm">
+                                        <i className="fas fa-th p-0 m-0"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <p className="card-text">Se desplegarian 2 maquinas en: <strong>192.230.320</strong></p>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+        return res;
     }
     ponerOpciones(cantidad) {
         let opciones = []
@@ -65,24 +95,10 @@ export default class Prediccion extends Component {
                         </select>
                     </div>
                     <div className="col-3 offset-1 row justify-content-end" >
-                        <button type="button" className="btn btn-success btn-block" > Calcular despliegue </button>
+                        <button type="button" className="btn btn-success btn-block" onClick={()=>{this.realizarPrediccion()}}> Calcular despliegue </button>
                     </div>
                 </div>
-                <div className="container my-4 pl-0">
-                    <div className="card shadow">
-                        <div className="card-body my-2">
-                            <div className="row">
-                                <h3 className="card-title col-11">Turing</h3>
-                                <div className="col-1 row justify-content-end">
-                                    <button className="btn btn-light btn-sm">
-                                        <i className="fas fa-th p-0 m-0"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <p className="card-text">Se desplegarian 2 maquinas en: <strong>192.230.320</strong></p>
-                        </div>
-                    </div>
-                </div>
+                {this.resultadoPrediccion()}
             </div>
         )
     }
