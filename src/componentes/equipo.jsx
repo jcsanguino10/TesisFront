@@ -21,8 +21,8 @@ export default class Equipo extends Component {
                     <div className="col-4 p-0 mb-2">
                         <div className="card px-3">
                             <div className="card-body pb-0 pt-2 infoEquipo">
-                                <div className="row">
-                                    <strong>Equipo</strong> <p>: {this.state.ip}</p>
+                                <div className="row justify-content-between">
+                                    <strong>Equipo:</strong> <p>{this.state.ip}</p>
                                 </div>
                             </div>
                         </div>
@@ -30,8 +30,8 @@ export default class Equipo extends Component {
                     <div className="col-4 p-0 mb-2">
                         <div className="card px-3 mx-4">
                             <div className="card-body pb-0 pt-2 infoEquipo">
-                                <div className="row">
-                                    <strong>Sala</strong> <p>: Turing</p>
+                                <div className="row justify-content-between">
+                                    <strong>Sala:</strong> <p>Turing</p>
                                 </div>
                             </div>
                         </div>
@@ -39,8 +39,8 @@ export default class Equipo extends Component {
                     <div className="col-4 p-0 mb-2">
                         <div className="card px-3">
                             <div className="card-body pb-0 pt-2 infoEquipo">
-                                <div className="row">
-                                    <strong>Consumo</strong> <p>: 200 W/h</p>
+                                <div className="row justify-content-between">
+                                    <strong>Consumo:</strong> <p> 200 W/h</p>
                                 </div>
                             </div>
                         </div>

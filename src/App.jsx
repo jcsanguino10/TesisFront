@@ -13,10 +13,10 @@ function App() {
       <div className="row">
         <div className="container-fluid mx-0 px-0 col-2 list-group sideBar">
           <span className="py-5"></span>
-          <NavLink exact to={"/"} className="list-group-item-transparent list-group-item-action py-2 pl-4" activeClassName="active"> Informe General</NavLink>
-          <NavLink exact to={"/sala/turing"} className="list-group-item-transparent list-group-item-action py-2 pl-4" activeClassName="active">Turing </NavLink>
-          <NavLink exact to={"/sala/waira-1"} className="list-group-item-transparent list-group-item-action py-2 pl-4" activeClassName="active">Waira 1</NavLink>
-          <NavLink exact to={"/sala/waira-2"} className="list-group-item-transparent list-group-item-action py-2 pl-4 " activeClassName="active">Waira 2</NavLink>
+          <NavLink exact to={"/"} className="list-group-item-transparent list-group-item-action py-2 pl-4" activeClassName="chosen"> Informe General</NavLink>
+          <NavLink exact to={"/sala/turing"} className="list-group-item-transparent list-group-item-action py-2 pl-4" activeClassName="chosen">Turing </NavLink>
+          <NavLink exact to={"/sala/waira-1"} className="list-group-item-transparent list-group-item-action py-2 pl-4" activeClassName="chosen">Waira 1</NavLink>
+          <NavLink exact to={"/sala/waira-2"} className="list-group-item-transparent list-group-item-action py-2 pl-4 " activeClassName="chosen">Waira 2</NavLink>
         </div>
         <div className="container-fluid mx-0 px-0 col-10" >
           <nav className="navbar navbar-expand-lg navbar-light shadow mb-3 bg-white rounded">

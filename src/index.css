@@ -2,6 +2,10 @@
     background-color: #242939;
     min-height: 100vh;
 }
+.chosen{
+    background-color: whitesmoke;
+    color: #242939
+}
 .infoEquipo{
     font-size: 20px;
 }

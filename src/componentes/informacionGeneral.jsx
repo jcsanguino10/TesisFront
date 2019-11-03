@@ -7,14 +7,14 @@ export default class informacionGeneral extends Component {
     super();
     this.state =
       {
-        ConsumoActual: 1000
+        ConsumoActual: 245000
       }
   }
   render() {
     return (
       <div className="container-fluid">        
         <div className="row">
-          <div className="col-10 ">
+          <div className="col-9 ">
             <div className="card shadow mb-3">
               <h3 className="p-3 tituloCard">Consumo de energia por sala</h3>
               <div className="card-body">
@@ -25,11 +25,12 @@ export default class informacionGeneral extends Component {
               </div>
             </div>
           </div>
-          <div className="col-2 align-self-center">
+          <div className="col-3 align-self-center">
             <div className="card shadow mb-3">
-              <div className="card-body align-self-center py-5">
-                <h1> {this.state.ConsumoActual} W/h</h1>
-                <h6 className="text-right">Total</h6>
+            <h3 className="p-3 my-0 tituloCard">Consumo total</h3>
+              <div className="card-body align-self-center py-3">
+                <h1 className="my-0">{this.state.ConsumoActual}</h1>
+                <h6 className="text-right my-0">W/h</h6>
               </div>
             </div>
           </div>
